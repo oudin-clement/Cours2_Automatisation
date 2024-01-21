@@ -10,7 +10,8 @@
         "slim/flash": "^0.4.0",
         "illuminate/database": "^10.40",
         "symfony/console": "^7.0",
-        "ext-http": "*"
+        "ext-http": "*",
+        "fakerphp/faker": "^1.23"
     },
     "autoload": {
         "psr-4": {
@@ -23,10 +24,10 @@
     },
     "scripts": {
 
-        "phpstan": "phpstan analyse --memory-limit=1G",
+        "phpstan": "vendor/bin/phpstan analyse src",
 
-        "phpcs": "phpcs --standard=PSR12 src",
+        "phpcs": "vendor/bin/phpcs --standard=PSR12 src",
 
-        "phpcbf": "phpcbf --standard=PSR12 src"
+        "phpcbf": "vendor/bin/phpcbf --standard=PSR12 src"
     }
 }
